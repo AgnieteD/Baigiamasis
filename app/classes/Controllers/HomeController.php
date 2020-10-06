@@ -3,12 +3,7 @@
 namespace App\Controllers;
 
 use App\Abstracts\Controller;
-use App\Accounts\Account;
-use App\App;
-use App\Views\Forms\HomeForm;
-use Core\Router;
 use Core\Views\Content;
-use Core\Views\Form;
 use Exception;
 
 class HomeController extends Controller

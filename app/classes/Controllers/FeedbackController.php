@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Controllers\Auth;
+namespace App\Controllers;
 
 use App\Abstracts\Controller;
-use App\App;
-use Core\Router;
+use Core\Views\Content;
+use Exception;
 
-class LogoutController extends Controller
+class FeedbackController extends Controller
 {
     /**
      * This method builds or sets
@@ -32,9 +32,14 @@ class LogoutController extends Controller
      * print $controller->my();
      *
      * @return string|null
+     * @throws Exception
      */
     function index(): ?string
     {
-        App::$session->logout(Router::getUrl('index'));
+        $content = new Content();
+        $this->page->setTitle('Atsiliepimai');
+        $this->page->setContent($content->render('feedback.tpl.php'));
+
+        return $this->page->render();
     }
 }

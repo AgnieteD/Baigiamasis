@@ -13,15 +13,18 @@ class Navigation extends View
         $nav = [
             [
                 'href' => Router::getUrl('index'),
-                'class' => 'active',
+                'class' => 'active-left',
                 'title' => 'Titulinis',
             ],
         ];
+
         if (App::$session->getUser()) {
-            $nav[] = ['href' => Router::getUrl('logout'), 'title' => 'Atsijungti'];
+            $nav[] = ['href' => Router::getUrl('feedback'), 'class' => 'nav-left', 'title' => 'Atsiliepimai'];
+            $nav[] = ['href' => Router::getUrl('logout'), 'class' => 'nav-right', 'title' => 'Atsijungti'];
         } else {
-            $nav[] = ['href' => Router::getUrl('register'), 'title' => 'Registruotis'];
-            $nav[] = ['href' => Router::getUrl('login'), 'title' => 'Prisijungti'];
+            $nav[] = ['href' => Router::getUrl('feedback'), 'class' => 'nav-left', 'title' => 'Atsiliepimai'];
+            $nav[] = ['href' => Router::getUrl('login'), 'class' => 'nav-right', 'title' => 'Prisijungti'];
+            $nav[] = ['href' => Router::getUrl('register'), 'class' => 'nav-right', 'title' => 'Registruotis'];
         }
 
         parent::__construct($nav);

@@ -74,13 +74,13 @@ class RegisterForm extends Form
                         ],
                 ],
             'validators' => [
-                'validate_fields_match' => [
-                    'fields' => [
-                        'password',
-                        'password_repeat',
-                    ],
-                    'error' => 'Laukeliai privalo sutapti',
-                ],
+//                'validate_fields_match' => [
+//                    'fields' => [
+//                        'password',
+//                        'password_repeat',
+//                    ],
+//                    'error' => 'Laukeliai privalo sutapti',
+//                ],
             ],
         ];
 
