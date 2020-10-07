@@ -18,18 +18,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/core/functions/form" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/classes/Views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desktop\baigiamasis_www\app\classes\Views" />
       <recent name="D:\Desktop\baigiamasis_www\core\functions\form" />
       <recent name="D:\Desktop\baigiamasis_www\app\classes\Controllers" />
       <recent name="D:\Desktop\baigiamasis_www\app\classes" />
       <recent name="D:\Desktop\baigiamasis_www\app" />
-      <recent name="D:\Desktop\baigiamasis_www\core" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -40,7 +40,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601988803140</updated>
-      <workItem from="1601988804563" duration="30733000" />
+      <workItem from="1601988804563" duration="53375000" />
     </task>
     <servers />
   </component>
@@ -48,6 +48,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="692" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602071839005">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="692" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1602071839005" />
+    <state x="673" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602090557246">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="673" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602090557246" />
     <state x="506" y="283" key="Github.CreateGistDialog" timestamp="1601992746986">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -56,5 +64,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="366" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1602063052813" />
+    <state x="660" y="135" key="refactoring.ChangeSignatureDialog" timestamp="1602074799387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="660" y="135" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1602074799387" />
+    <state x="607" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602074563812">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="607" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602074563812" />
   </component>
 </project>

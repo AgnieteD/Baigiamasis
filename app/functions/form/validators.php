@@ -71,3 +71,20 @@ function validate_max_length_no_int($field_value, &$field)
 
     return true;
 }
+
+/**
+ * Validates max 400 symbol length
+ *
+ * @param $field_value
+ * @param $field
+ * @return bool
+ */
+function validate_max_500_length($field_value, &$field)
+{
+    if (strlen($field_value) > 500) {
+        $field['error'] = 'Simbolių skaičius negali viršyti 400';
+        return false;
+    }
+
+    return true;
+}

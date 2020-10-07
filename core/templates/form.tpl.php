@@ -6,6 +6,7 @@
             <label>
             <span><?php print $field['label']; ?></span>
         <?php endif; ?>
+
         <!-- Select field -->
         <?php if ($field['type'] === 'select') : ?>
             <select <?php print select_attr($field_id, $field); ?>>
@@ -16,7 +17,12 @@
                 <?php endforeach; ?>
             </select>
 
+            <!-- Textarea field -->
+        <?php elseif ($field['type'] === 'textarea') : ?>
+            <textarea <?php print textarea_attr($field_id, $field); ?>></textarea>
+
         <?php else : ?>
+
             <!-- Input field -->
             <input <?php print input_attr($field_id, $field); ?> />
 
