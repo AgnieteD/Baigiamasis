@@ -27,7 +27,7 @@ class Session
     public function loginFromCookie(): bool
     {
         if (!empty($_SESSION)) {
-            if ($this->login($_SESSION['username'], $_SESSION['password'])) {
+            if ($this->login($_SESSION['email'], $_SESSION['password'])) {
                 return true;
             }
         }
@@ -38,15 +38,15 @@ class Session
     /**
      * Login user, if user exists in db
      *
-     * @param string $username
+     * @param string $email
      * @param string $password
      * @return bool
      */
-    public function login(string $username, string $password): bool
+    public function login(string $email, string $password): bool
     {
-        $users = App::$db->getRowsWhere('users', ['username' => $username, 'password' => $password]);
+        $users = App::$db->getRowsWhere('users', ['email' => $email, 'password' => $password]);
         if ($users) {
-            $_SESSION['username'] = $username;
+            $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
 
             $this->user = reset($users);

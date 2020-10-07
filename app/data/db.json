@@ -31,6 +31,14 @@
       "password": "zzz",
       "phone": "",
       "address": ""
+    },
+    {
+      "username": "gg",
+      "lastname": "gg",
+      "email": "gg@gg.lt",
+      "password": "ggg",
+      "phone": "666",
+      "address": "ggg g. 96-69"
     }
   ]
 }

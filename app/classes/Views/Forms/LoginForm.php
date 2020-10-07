@@ -13,22 +13,25 @@ class LoginForm extends Form
                 'method' => 'POST',
             ],
             'fields' => [
-                'username' => [
-                    'label' => 'User Name',
+                'email' => [
+                    'label' => 'El. paštas',
                     'type' => 'text',
+                    'filter' => FILTER_SANITIZE_EMAIL,
                     'validators' => [
                         'validate_field_not_empty',
+                        'validate_email',
+                        'validate_email_db',
                     ],
                     'extra' =>
                         [
                             'attr' =>
                                 [
-                                    'placeholder' => 'Enter Username',
+                                    'placeholder' => 'Jūsų@paštas.lt',
                                 ],
                         ],
                 ],
                 'password' => [
-                    'label' => 'Password',
+                    'label' => 'Slaptažodis',
                     'type' => 'password',
                     'validators' => [
                         'validate_field_not_empty',
@@ -37,7 +40,7 @@ class LoginForm extends Form
                         [
                             'attr' =>
                                 [
-                                    'placeholder' => 'Enter Password',
+                                    'placeholder' => 'Jūsų slaptažodis',
                                 ],
                         ],
                 ],

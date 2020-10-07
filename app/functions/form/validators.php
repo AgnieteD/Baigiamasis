@@ -19,6 +19,23 @@ function validate_user_unique(string $field_value, array &$field): bool
 }
 
 /**
+ * Validates if email is in db
+ *
+ * @param string $field_value
+ * @param array $field
+ * @return bool
+ */
+function validate_email_db(string $field_value, array &$field): bool
+{
+    if (!App::$db->getRowsWhere('users', ['email' => $field_value])) {
+        $field['error'] = 'Tokio vartotojo nėra';
+        return false;
+    }
+
+    return true;
+}
+
+/**
  * Validates login
  *
  * @param array $form_values
@@ -27,8 +44,8 @@ function validate_user_unique(string $field_value, array &$field): bool
  */
 function validate_login(array $form_values, array &$form): bool
 {
-    if (!App::$session->login($form_values['username'], $form_values['password'])) {
-        $form['error'] = 'Klaidingai įvesta';
+    if (!App::$session->login($form_values['email'], $form_values['password'])) {
+        $form['error'] = 'Įvestas neteisingas slaptažodis';
         return false;
     }
 
