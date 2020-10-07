@@ -11,8 +11,8 @@ use App\App;
  */
 function validate_user_unique(string $field_value, array &$field): bool
 {
-    if (App::$db->getRowsWhere('users', ['username' => $field_value])) {
-        $field['error'] = 'Toks useris jau egzistuoja';
+    if (App::$db->getRowsWhere('users', ['email' => $field_value])) {
+        $field['error'] = 'Toks vartotojas jau egzistuoja';
         return false;
     }
     return true;
@@ -29,6 +29,26 @@ function validate_login(array $form_values, array &$form): bool
 {
     if (!App::$session->login($form_values['username'], $form_values['password'])) {
         $form['error'] = 'Klaidingai įvesta';
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Validates if field has no integers and max 40 symbol length
+ *
+ * @param $field_value
+ * @param $field
+ * @return bool
+ */
+function validate_max_length_no_int($field_value, &$field)
+{
+    if (strlen($field_value) > 40) {
+        $field['error'] = 'Simbolių skaičius negali viršyti 40';
+        return false;
+    } else if (strpbrk($field_value, '1234567890') !== FALSE) {
+        $field['error'] = 'Laukelyje negali būti skaičių';
         return false;
     }
 

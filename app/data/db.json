@@ -1,1 +1,36 @@
-{"users":[{"username":"aaa","password":"aaa"},{"username":"bbb","password":"bbb"}]}
+{
+  "users": [
+    {
+      "username": "aaa",
+      "lastname": "bbb",
+      "email": "aa@aa.lt",
+      "password": "aaa",
+      "phone": 123,
+      "address": "aaa g. 11"
+    },
+    {
+      "username": "bbb",
+      "lastname": "aaa",
+      "email": "bb@bb.lt",
+      "password": "bbb",
+      "phone": "",
+      "address": ""
+    },
+    {
+      "username": "ccc",
+      "lastname": "ccc",
+      "email": "cc@cc.lt",
+      "password": "ccc",
+      "phone": "",
+      "address": ""
+    },
+    {
+      "username": "zzz",
+      "lastname": "zzz",
+      "email": "zz@zz.lt",
+      "password": "zzz",
+      "phone": "",
+      "address": ""
+    }
+  ]
+}

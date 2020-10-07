@@ -74,11 +74,9 @@ class Form extends \Core\Abstracts\Views\Form
         $form_values = self::getSubmitData();
         $success = true;
         foreach ($this->data['fields'] as $key => &$field) {
-            // go through validators array
             $field_value = $form_values[$key];
 
             foreach ($field['validators'] as $validator_key => $validator) {
-                //check if validator is array
                 if (is_array($validator)) {
                     $function = $validator_key;
                     $params = $validator;

@@ -16,22 +16,54 @@ class RegisterForm extends Form
             'fields' =>
                 [
                     'username' => [
-                        'label' => 'User Name',
+                        'label' => 'Vardas',
                         'type' => 'text',
                         'validators' => [
                             'validate_field_not_empty',
+                            'validate_max_length_no_int',
+                        ],
+                        'extra' =>
+                            [
+                                'attr' =>
+                                    [
+                                        'placeholder' => 'Jūsų vardas',
+                                    ],
+                            ],
+                    ],
+                    'lastname' => [
+                        'label' => 'Pavardė',
+                        'type' => 'text',
+                        'validators' => [
+                            'validate_field_not_empty',
+                            'validate_max_length_no_int',
+                        ],
+                        'extra' =>
+                            [
+                                'attr' =>
+                                    [
+                                        'placeholder' => 'Jūsų pavardė',
+                                    ],
+                            ],
+                    ],
+                    'email' => [
+                        'label' => 'El. paštas',
+                        'type' => 'text',
+                        'filter' => FILTER_SANITIZE_EMAIL,
+                        'validators' => [
+                            'validate_field_not_empty',
+                            'validate_email',
                             'validate_user_unique',
                         ],
                         'extra' =>
                             [
                                 'attr' =>
                                     [
-                                        'placeholder' => 'Enter Username',
+                                        'placeholder' => 'Jūsų@paštas.lt',
                                     ],
                             ],
                     ],
                     'password' => [
-                        'label' => 'Password',
+                        'label' => 'Slaptažodis',
                         'type' => 'password',
                         'validators' => [
                             'validate_field_not_empty',
@@ -40,21 +72,33 @@ class RegisterForm extends Form
                             [
                                 'attr' =>
                                     [
-                                        'placeholder' => 'Password',
+                                        'placeholder' => 'Jūsų slaptažodis',
                                     ],
                             ],
                     ],
-                    'password_repeat' => [
-                        'label' => 'Repeat Password',
-                        'type' => 'password',
+                    'phone' => [
+                        'label' => 'Telefono Nr.',
+                        'type' => 'tel',
                         'validators' => [
-                            'validate_field_not_empty',
                         ],
                         'extra' =>
                             [
                                 'attr' =>
                                     [
-                                        'placeholder' => 'Repeat Password',
+                                        'placeholder' => 'Jūsų telefono nr.',
+                                    ],
+                            ],
+                    ],
+                    'address' => [
+                        'label' => 'Adresas',
+                        'type' => 'address',
+                        'validators' => [
+                        ],
+                        'extra' =>
+                            [
+                                'attr' =>
+                                    [
+                                        'placeholder' => 'Jūsų adresas',
                                     ],
                             ],
                     ],
@@ -74,13 +118,6 @@ class RegisterForm extends Form
                         ],
                 ],
             'validators' => [
-//                'validate_fields_match' => [
-//                    'fields' => [
-//                        'password',
-//                        'password_repeat',
-//                    ],
-//                    'error' => 'Laukeliai privalo sutapti',
-//                ],
             ],
         ];
 
