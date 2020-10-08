@@ -50,8 +50,59 @@ header {
     transition-duration: 0.4s;
 }
 
+/*----------------Main---------------------*/
+
 main {
-    padding-bottom: 5em;
+    padding-bottom: 4.5em;
+    background: linear-gradient(rgba(224, 221, 172, 0.7), rgba(255, 255, 255, 0.8)), url("../img/floor-tile.png");
+}
+
+#banner {
+    background-image: url('../img/bg-bmw.jpg');
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+#services {
+    max-width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#services .card {
+    height: 400px;
+    width: 25%;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid lightgray;
+    background: rgba(224, 221, 172, 0.6);
+    font-size: 14px;
+    color: rgb(60, 60, 60);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+}
+
+#services .card img {
+    width: 100%;
+    height: 40%;
+    box-sizing: border-box;
+}
+
+#services .card p, #services .card h2 {
+    margin: 10px 5px;
+}
+
+#services .card p {
+    color: rgb(115, 115, 115);
+}
+
+.map {
+    height: 300px;
+    width: 100%;
 }
 
 /*----------------Form---------------------*/
@@ -59,12 +110,14 @@ main {
 .title {
     text-align: center;
     color: #090A08;
+    margin: 0 auto;
+    padding-top: 20px;
 }
 
 form {
     margin: 20px auto;
     width: 50%;
-    padding: 30px 40px;
+    padding: 20px 40px;
     border-radius: 10px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
     font-weight: 600;
@@ -75,7 +128,7 @@ form {
     height: 100%;
 }
 
-label, input, select {
+label, input {
     display: block;
     width: 100%;
     outline: none;
@@ -83,23 +136,19 @@ label, input, select {
     border-radius: 5px;
 }
 
-input, select {
+input {
     padding: 10px;
     box-sizing: border-box;
-    margin-top: 20px;
+    margin: 15px 0;
 }
 
-input {
-    margin-bottom: 5px;
-}
-
-select, button, label {
+button, label {
     color: #090A08;
 }
 
 label {
     text-align: right;
-    padding: 10px;
+    margin-top: 10px;
 }
 
 textarea {
@@ -126,7 +175,7 @@ button:hover {
     transition-duration: 0.2s;
 }
 
-.message, .error {
+.error {
     display: block;
     color: #c60b0b;
     font-weight: 600;
@@ -138,26 +187,21 @@ button:hover {
     text-align: left;
 }
 
-.message {
-    text-align: center;
-    font-size: 20px;
-}
-
 /*---------------------Table---------------------*/
 
 table {
-    margin: 30px auto;
+    margin: 20px auto;
     width: 70%;
     border-collapse: collapse;
     text-align: center;
-    background: #E0DDAC;
+    box-sizing: border-box;
+    background: rgba(224, 221, 172, 0.6);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
     color: #090A08;
 }
 
 th, td {
     border: 2px inset #D8D6D3;
-    padding: 10px;
 }
 
 th {
@@ -165,10 +209,19 @@ th {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+    padding: 10px 20px;
+}
+
+td {
+    box-sizing: border-box;
+    max-width: 600px;
+    overflow: auto;
+    padding: 5px;
 }
 
 .button {
-    width: 30%;
+    width: 22%;
+    padding: 10px 0;
     text-align: center;
     box-sizing: border-box;
     text-decoration: none;
@@ -177,8 +230,7 @@ th {
 }
 
 .button:hover {
-    font-size: 18px;
-    width: 33%;
+    transform: scale(1.2);
     transition-duration: 0.4s;
 }
 
@@ -199,4 +251,67 @@ footer {
 footer .copyright {
     font-size: 1em;
     color: #6CBE2B;
+}
+
+/*-----------------------Mobile-----------------*/
+
+@media only screen and (max-width: 400px) {
+    header {
+        height: 100px;
+        padding-bottom: 2px;
+    }
+
+    .active-left, .nav-left, .nav-right {
+        display: inline-block;
+        width: 25%;
+        margin: 0 !important;
+    }
+
+    #banner {
+        height: 150px;
+    }
+
+    #services {
+        max-width: 100%;
+    }
+
+    #services {
+        flex-direction: column;
+        min-height: 200vh;
+    }
+
+    #services .card {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    #services .card:last-child {
+        margin-bottom: 0;
+    }
+
+    #services .card p, #services .card h2 {
+        margin: 20px 10px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    td {
+        max-width: 265px;
+        padding: 2px;
+    }
+
+    form {
+        width: 90%;
+        padding: 15px 30px;
+    }
+
+    input {
+        box-sizing: border-box;
+    }
 }

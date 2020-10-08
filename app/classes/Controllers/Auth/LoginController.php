@@ -48,12 +48,10 @@ class LoginController extends Controller
 
                 header('Location:' . Router::getUrl('index'));
                 exit;
-            } else {
-                $message = 'Prisijungti nepavyko!';
             }
         }
 
-        $content = new Content(['form' => $form->render(), 'message' => $message ?? null]);
+        $content = new Content(['form' => $form->render()]);
 
         $this->page->setTitle('Login');
         $this->page->setContent($content->render('login.tpl.php'));

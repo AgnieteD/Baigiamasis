@@ -32,7 +32,7 @@ class Feedback extends DataHolder
         return $this->data['comment'] ?? null;
     }
 
-    public function setDate($date)
+    public function setDate(?string $date)
     {
         $this->data['date'] = $date;
     }

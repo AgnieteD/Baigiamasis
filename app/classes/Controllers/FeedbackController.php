@@ -56,16 +56,11 @@ class FeedbackController extends Controller
                 $feedback->setDate(date('Y-m-d H:i:s'));
 
                 App::$db->insertRow('feedback', $feedback->_getData());
-
-                $message = 'Komentaras įrašytas';
-            } else {
-                $message = 'Komentaras neišsaugotas';
             }
         }
 
         $table = new FeedbackTable();
-
-        $content = new Content(['table' => $table->render() ?? null, 'form' => $form->render() ?? null, 'message' => $message ?? null]);
+        $content = new Content(['table' => $table->render() ?? null, 'form' => $form->render() ?? null]);
         $this->page->setTitle('Atsiliepimai');
         $this->page->setContent($content->render('feedback.tpl.php'));
 

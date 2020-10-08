@@ -51,12 +51,10 @@ class RegisterController extends Controller
 
                 header('Location:' . Router::getUrl('login'));
                 exit;
-            } else {
-                $message = 'Registracija nepavyko';
             }
         }
 
-        $content = new Content(['form' => $form->render(), 'message' => $message ?? null]);
+        $content = new Content(['form' => $form->render()]);
 
         $this->page->setTitle('Register');
         $this->page->setContent($content->render('register.tpl.php'));
