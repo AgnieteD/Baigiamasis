@@ -37,6 +37,7 @@ class FeedbackForm extends Form
                     'save' =>
                         [
                             'title' => 'Komentuoti',
+                            'type' => 'submit',
                         ],
                 ],
             'validators' => [

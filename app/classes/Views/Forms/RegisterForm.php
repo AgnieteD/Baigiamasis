@@ -107,15 +107,9 @@ class RegisterForm extends Form
                 [
                     'save' =>
                         [
-                            'title' => 'Register',
-                            'extra' =>
-                                [
-                                    'attr' =>
-                                        [
-                                            'class' => 'red-button',
-                                        ],
-                                ],
-                        ],
+                            'title' => 'Registruotis',
+                            'type' => 'submit',
+                          ],
                 ],
             'validators' => [
             ],

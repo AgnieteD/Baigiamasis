@@ -18,18 +18,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/classes/Views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public_html/assets/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desktop\baigiamasis_www\public_html\assets\img" />
       <recent name="D:\Desktop\baigiamasis_www\app\classes\Views" />
       <recent name="D:\Desktop\baigiamasis_www\core\functions\form" />
       <recent name="D:\Desktop\baigiamasis_www\app\classes\Controllers" />
       <recent name="D:\Desktop\baigiamasis_www\app\classes" />
-      <recent name="D:\Desktop\baigiamasis_www\app" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -40,7 +40,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601988803140</updated>
-      <workItem from="1601988804563" duration="58427000" />
+      <workItem from="1601988804563" duration="87378000" />
     </task>
     <servers />
   </component>
@@ -68,9 +68,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="660" y="135" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1602074799387" />
-    <state x="607" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602074563812">
+    <state x="607" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602168834903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="607" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602074563812" />
+    <state x="607" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602168834903" />
   </component>
 </project>

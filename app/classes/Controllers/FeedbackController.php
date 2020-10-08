@@ -48,7 +48,7 @@ class FeedbackController extends Controller
 
                 $user = App::$db->getRowsWhere('users', ['email' => App::$session->getUser()['email']]);
                 foreach ($user as $user_key => $user_value) {
-                    $user_id = "#0$user_key";
+                    $user_id = $user_key;
                 }
                 $feedback->setId($user_id);
 

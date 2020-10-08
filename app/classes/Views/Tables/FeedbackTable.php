@@ -11,11 +11,16 @@ class FeedbackTable extends Table
     {
         $data = App::$db->getRowsWhere('feedback', []);
 
+        foreach ($data as &$feedback) {
+            $feedback['name'] = App::$db->getRowById('users', $feedback['id'])['username'];
+            unset($feedback['id']);
+        }
+
         $table_array = [
             'headers' => [
-                'ID',
                 'Komentaras',
                 'Data',
+                'Vardas',
             ],
             'rows' =>
                 $data,

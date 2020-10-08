@@ -47,16 +47,8 @@ class LoginForm extends Form
             ],
             'buttons' => [
                 'submit' => [
-                    'title' => 'Login',
+                    'title' => 'Prisijungti',
                     'type' => 'submit',
-                    'value' => 'submit',
-                    'extra' =>
-                        [
-                            'attr' =>
-                                [
-                                    'class' => 'gr-button',
-                                ],
-                        ],
                 ],
             ],
             'validators' => [
